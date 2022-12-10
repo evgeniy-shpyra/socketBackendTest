@@ -18,6 +18,10 @@ const io = socket(server, {
     },
 })
 
+io.on("connect_error", (err) => {
+    console.log(`connect_error due to ${err.message}`);
+  });
+
 io.on("connection", (socket) => {
     console.log("user connected " + socket.id)
 
