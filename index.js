@@ -13,9 +13,9 @@ const server = app.listen(port, () => {
 })
 
 const io = socket(server, {
-    cors: {
-        origin: "https://socket-frontend-test.vercel.app",
-    },
+    // cors: {
+    //     origin: "https://socket-frontend-test.vercel.app",
+    // },
     transports: ["websocket", "polling"],
 })
 
